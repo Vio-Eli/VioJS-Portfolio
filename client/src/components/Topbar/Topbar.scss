@@ -1,0 +1,23 @@
+.topbarWrapper {
+
+    // Container Size
+    width: 100%;
+    height: 70px;
+
+    // Color
+    background-color: yellow;
+
+    // Positioning 
+    position: fixed;
+    z-index: 2;
+
+    // Display
+    display: flex;
+    flex-direction: flex-end;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        background-color: purple;
+    }
+}

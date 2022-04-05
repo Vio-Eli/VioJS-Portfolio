@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Topbar.scss';
 
 interface TopBarProps {
     menuOpen: boolean,
@@ -12,7 +13,7 @@ export default function Topbar(props: TopBarProps) {
     }
 
     return (
-        <div className={ "topbar " + (props.menuOpen && "active") }>
+        <div className={ "topbarWrapper " + (props.menuOpen && "active") }>
             <div className="burger" onClick={ burgerHandler }>
                 burger
             </div>
