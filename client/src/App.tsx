@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Menu from './components/Menu/Menu';
+import Topbar from './components/Topbar/Topbar';
 import Home from './pages/home/Home';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <div className="app">
+      < Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> 
       <Home />
     </div>
   );
