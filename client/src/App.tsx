@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="app">
+      < Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       < Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> 
       <Home />
     </div>
