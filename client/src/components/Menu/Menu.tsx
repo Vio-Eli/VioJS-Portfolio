@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Menu.scss';
 
 interface MenuProps {
   menuOpen: boolean,
@@ -8,7 +9,7 @@ interface MenuProps {
 
 export default function Menu(props: MenuProps) {
   return (
-    <div className={"Menu " + (props.menuOpen && "active")}>
+    <div className={"menuWrapper " + (props.menuOpen && "active")}>
       <div>word thing</div>
       </div>
   )

@@ -1,0 +1,28 @@
+.menuWrapper {
+
+    // Container size
+    width: 100vw;
+    height: 100vh;
+
+    // Color
+    background-color: white;
+
+    // Positioning
+    position: fixed;
+    z-index: 1;
+
+    // Display
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+    // Changed on click
+    top: -1000px;
+    
+    // On active menu click
+    &.active {
+        top: 0px;
+    }
+}
