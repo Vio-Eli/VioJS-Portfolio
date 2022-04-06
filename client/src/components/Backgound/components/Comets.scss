@@ -1,5 +1,5 @@
 @use '../../../colors';
-$shooting-time: 3000ms;
+$shooting-time: 2000ms;
 
 .Comet0 {
     display: flex;
@@ -59,9 +59,9 @@ $shooting-time: 3000ms;
 
     @for $i from 1 through 200 {
         &:nth-child(#{$i}) {
-            $delay: random(9999) +2000ms;
-            top: calc(50% - #{random(500) - 400px}); // 400 - 200
-            left: calc(50% - #{random(300) - 200px}); // 300 + 0
+            $delay: random(9999) +0ms;
+            top: calc(60% - #{random(100) - 50vh}); // 400 - 200
+            left: calc(60% - #{random(100) - 50vw}); // 300 + 0
             animation-delay: $delay;
             // opacity: random(50) / 100 + 0.5;
 
@@ -107,7 +107,7 @@ $shooting-time: 3000ms;
     }
 
     100% {
-        transform: translateX(800px);
+        transform: translateX(random(100) + (random(10)-5)*8vh);
     }
 }
 

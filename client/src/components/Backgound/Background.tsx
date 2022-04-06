@@ -25,13 +25,14 @@ export default function Background() {
             document.removeEventListener('mousemove', onMouseMove);
         };
 
-    }, []);
+    }, [windowHeight, windowWidth]);
 
     
     return (
         <div>
-            < Comets />
-            <div className="Background0"/>
+            <div className="Background0">
+                < Comets />
+            </div>
             <div className="Background1"/>
         </div>
     );
