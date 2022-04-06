@@ -1,3 +1,5 @@
+@use '../../colors.scss';
+
 .menuWrapper {
 
     // Container size
@@ -5,11 +7,11 @@
     height: 100vh;
 
     // Color
-    background-color: white;
+    background: linear-gradient(180deg, colors.$plump-purple 0%, colors.$antique-fuchsia 100%);
 
     // Positioning
     position: fixed;
-    z-index: 1;
+    z-index: 3;
 
     // Display
     display: flex;
@@ -24,5 +26,64 @@
     // On active menu click
     &.active {
         top: 0px;
+    }
+
+    >ul {
+        padding: 0px;
+
+        > li {
+
+            // Remove bullet list
+            list-style: none;
+
+            // Display
+            display: flex;
+            flex-direction: column;            
+            justify-content: center;
+            align-items: center;
+
+            > a {
+                // Remove blue hyperlink
+                text-decoration: none;
+                color: colors.$white;   
+
+                // Font 
+                font-size: 70px;
+                cursor: default;
+                font-weight: bold;
+
+                // Sets font to white on hover just in case
+                &:hover {
+                    color: colors.$white;
+                }
+
+                // Sets another a element beforehand; it's an underline
+                &::before {
+                    // Empty content
+                    content: "";
+
+                    // Size
+                    width: 100%;
+                    height: 4px;
+
+                    // Display
+                    position: relative;
+                    display: block;
+                    top: 80px;
+                    background-color: colors.$spanish-violet;
+
+                    // Transformations
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+
+                }
+
+                // On hover, sets before
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+
+            }
+        }
     }
 }

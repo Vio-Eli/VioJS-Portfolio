@@ -1,8 +1,19 @@
-.Background {
+.Background0 {
     width: 110%;
     height: 110%;
     left: 0;
     top: 0;
     position: absolute;
-    background: url('./mars.png') no-repeat left center / cover;
+    z-index: 0;
+    background: url('./marsLayer0.png') no-repeat left center / cover;
+}
+
+.Background1 {
+    width: 110%;
+    height: 110%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background: url('./marsLayer1.png') no-repeat left center / cover;
 }

@@ -10,7 +10,11 @@ interface MenuProps {
 export default function Menu(props: MenuProps) {
   return (
     <div className={"menuWrapper " + (props.menuOpen && "active")}>
-      <div>word thing</div>
-      </div>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PROJECTS</a></li>
+      </ul>
+    </div>
   )
 }

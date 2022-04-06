@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Comets from "./components/Comets";
 import "./Background.scss";
 
 export default function Background() {
@@ -8,13 +9,15 @@ export default function Background() {
 
     useEffect(() => {
 
-        const bg = document.querySelector('.Background') as HTMLElement;
+        const bg0 = document.querySelector('.Background0') as HTMLElement;
+        const bg1 = document.querySelector('.Background1') as HTMLElement;
 
         const onMouseMove = (e: MouseEvent) => {
             const mouseX = e.clientX / windowWidth;
             const mouseY = e.clientY / windowHeight;
 
-            bg.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+            bg0.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+            bg1.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
         };
 
         document.addEventListener('mousemove', onMouseMove);
@@ -27,7 +30,9 @@ export default function Background() {
     
     return (
         <div>
-            <div className="Background" />
+            < Comets />
+            <div className="Background0"/>
+            <div className="Background1"/>
         </div>
     );
 }

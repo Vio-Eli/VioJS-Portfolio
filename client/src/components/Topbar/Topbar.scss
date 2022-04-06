@@ -16,11 +16,6 @@
     align-items: center;
     justify-content: right;
 
-    // When topbar is active alongside menu
-    &.active {
-        // Empty
-    }
-
     >.burger {
 
         // Container size
@@ -52,7 +47,7 @@
 
             // Sets the X as purple
             > .lineOne, .lineTwo{
-                background-color: colors.$spanish-violet;
+                background-color: colors.$white;
             }
            
             >.lineOne {
