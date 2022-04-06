@@ -1,7 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './Menu.scss';
 
-export default function Menu() {
+interface MenuProps {
+  menuOpen: boolean,
+  setMenuOpen(menuOpen: boolean): void
+}
+
+
+export default function Menu(props: MenuProps) {
   return (
-    <div>Menu</div>
+    <div className={"menuWrapper " + (props.menuOpen && "active")}>
+      <div>word thing</div>
+      </div>
   )
 }
