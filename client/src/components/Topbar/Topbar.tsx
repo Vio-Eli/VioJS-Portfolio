@@ -14,8 +14,9 @@ export default function Topbar(props: TopBarProps) {
 
     return (
         <div className={ "topbarWrapper " + (props.menuOpen && "active") }>
-            <div className="burger" onClick={ burgerHandler }>
-                burger
+            <div className={"burger " + (props.menuOpen && "active")} onClick={ burgerHandler }>
+                <span className='lineOne'></span>
+                <span className='lineTwo'></span>
             </div>
         </div>
     )
