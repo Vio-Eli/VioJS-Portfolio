@@ -1,13 +1,14 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Background from '../../components/Backgound/Background';
 import './Home.scss'
+import Title from '../../components/Title/Title';
 
 export default function Home() {
 
   return (
     <div>
-      <h1>VioJS</h1>
-      <Background/>
+      < Title />
+      < Background />
     </div>
   )
 }

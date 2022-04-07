@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Comets from "./components/Comets";
+import Comets from "./components/Comets/Comets";
+import Stars from "./components/Stars/Stars";
 import "./Background.scss";
 
 export default function Background() {
@@ -32,6 +33,7 @@ export default function Background() {
         <div>
             <div className="Background0">
                 < Comets />
+                < Stars />
             </div>
             <div className="Background1"/>
         </div>

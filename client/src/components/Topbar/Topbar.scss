@@ -19,7 +19,7 @@
     >.burger {
 
         // Container size
-        width: 25px;
+        width: 30px;
         height: 15px;
 
         // Display
@@ -27,11 +27,11 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-        margin: 0px 15px;
+        margin-right: 20px;
 
         >span {
             // Burger size
-            width: 20px;
+            width: 30px;
             height: 2px;
 
             // Burger color
@@ -52,11 +52,11 @@
            
             >.lineOne {
                 transform: rotate(40deg) translateY(7px) translateX(2px);
-                width: 25px;
+                width: 32px;
             }
             >.lineTwo {
                 transform: rotate(-40deg) translateY(-7px) translateX(2px);
-                width: 25px;
+                width: 32px;
             }
         }
     }

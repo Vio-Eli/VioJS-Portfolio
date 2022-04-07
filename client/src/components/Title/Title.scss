@@ -1,0 +1,42 @@
+@use '../../colors.scss';
+
+.container {
+
+    // Container size
+    height: 100%;
+    width: 100%;
+
+    // Display
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.text {
+
+    // Font 
+    font-weight: 100;
+    font-size: 75px;
+
+    // Display    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0); 
+
+    // Colors
+    color: colors.$white;
+
+    // 3D Background Issues
+    pointer-events: none; // Use this instead of cursor to prevent highlighting
+    z-index: 4; // Over lay the background and stars    
+    white-space: nowrap; // White space counts, no new line
+
+
+}
+
+
+.dud {
+    // Color of the changing word
+    color: #757575;
+}
