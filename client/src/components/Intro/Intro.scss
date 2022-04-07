@@ -1,11 +1,27 @@
 @use '../../colors.scss';
 
+:root {
+    --size: 300px;
+}
+
+.icon {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    z-index: 1;
+
+    align-items: center;
+    //margin-top: -200px;
+}
+
 .introWrapper {
-    
+
     // Display
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    //text-align: center;
+
     z-index: 4;
 
     //background: colors.$plump-purple;
@@ -13,29 +29,85 @@
     height: 100vh;
     width: 100vw;
 
-    >.usIntroBox {
-
+    >.left {
         // Display
-        display: flex;
         justify-content: center;
-        margin: 20px;
+        align-items: center;
+        display: flex;
+        flex: .5;
+        flex-direction: column;
+        margin: auto;
 
-        // Container size and appearance
-        width: 60%;
-        height: 100px;
-        border-radius: 30px;
+        $hexDist: 5px;
+        $hexSize: 250px;
 
-        // Border
-        border: colors.$midnight-blue 1px solid;
+        >.top-left {
+            margin-right: 0.866*($hexSize + $hexDist / 2);//150px;
+            margin-bottom: ($hexSize + $hexDist / 2);
+            position: absolute;
+        }
 
-        // Colors
-        background: linear-gradient(180deg, colors.$blue-pigment 0%, colors.$spanish-violet 100%);
-        z-index: 4;
-        
-        >span {
-            margin: 10px;
-            top: 10px;
+        >.middle-right {
+            margin-left: 0.866*($hexSize + $hexDist / 2);
+            position: absolute;
+        }
+
+        >.bottom-left {
+            margin-top: ($hexSize + $hexDist / 2);
+            margin-right: 0.866*($hexSize + $hexDist / 2);
+            position: absolute;
         }
     }
 
+    >.right {
+        display: flex;
+        flex: .5;
+    }
+
+
+}
+
+@mixin hexagonMaker($hexagon-size: 200px) {
+    $hexagon-color-1: #00ffb8;
+    $hexagon-color-2: #13ce9a;
+
+    width: 0.5 * $hexagon-size;
+    height: 0.866 * $hexagon-size;
+    background: $hexagon-color-1;
+    //border-radius: ($hexagon-size / 10);
+    //transition: transform 400ms ease;
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        //border-radius: inherit;
+    }
+
+    &:before {
+        transform: rotate(60deg);
+    }
+
+    &:after {
+        transform: rotate(-60deg);
+    }
+}
+
+.hexagon {
+    @include hexagonMaker(250px); // 225px
+    transform: translate(0%, 0%);
+}
+
+.hexaRot {
+    @include hexagonMaker();
+    transform: translate(0%, 0%);
+    transform: rotate(30deg);
 }
