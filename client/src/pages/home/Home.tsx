@@ -15,9 +15,9 @@ export default function Home() {
       container,
       {
         snapDestinationY: '100%',
-        timeout: 50,
+        timeout: 30,
         duration: 300,
-        threshold: 0.1,
+        threshold: 0.05,
         easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t),
       },
     )
