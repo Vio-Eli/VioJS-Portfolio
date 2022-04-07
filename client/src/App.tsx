@@ -17,7 +17,7 @@ function App() {
         < Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/intro' element={<Sections/>} />
+          <Route path='/home' element={<Sections/>} />
         </Routes>
       </div>
     </Router>

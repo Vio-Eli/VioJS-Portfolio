@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Title.scss';
+import Background from '../../components/Backgound/Background';
 
 
 class TextScramble {
@@ -92,7 +93,6 @@ export default function Title() {
 
     useEffect(() => {
         const el = document.querySelector(".text");
-        console.log(el);
         const fx = new TextScramble(el);
         let counter = 0;
 
@@ -109,7 +109,8 @@ export default function Title() {
 
     return (
         <div className="container">
-            <div className="text">Hi</div>
-            </div>
+            < Background />
+            <div className="text"></div>
+        </div>
     );
 }

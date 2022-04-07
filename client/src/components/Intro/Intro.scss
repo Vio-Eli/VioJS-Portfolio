@@ -1,0 +1,35 @@
+@use '../../colors.scss';
+
+.introWrapper {
+    
+    // Display
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+
+    >.usIntroBox {
+
+        // Display
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+
+        // Container size and appearance
+        width: 60%;
+        height: 100px;
+        border-radius: 30px;
+
+        // Border
+        border: colors.$midnight-blue 1px solid;
+
+        // Colors
+        background: linear-gradient(180deg, colors.$blue-pigment 0%, colors.$spanish-violet 100%);
+        
+        >span {
+            margin: 10px;
+            top: 10px;
+        }
+    }
+
+}
