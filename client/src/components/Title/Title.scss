@@ -35,6 +35,77 @@
 
 }
 
+.lowertext {
+
+    font-weight: 100;
+    font-size: 50px;
+
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+    color: colors.$white;
+
+    // 3D Background Issues
+    pointer-events: none; // Use this instead of cursor to prevent highlighting
+    z-index: 4; // Over lay the background and stars    
+    white-space: nowrap; // White space counts, no new line
+}
+
+.arrows {
+    width: 60px;
+    height: 52px;
+
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+    pointer-events: none;
+    z-index: 4;
+    white-space: nowrap;
+}
+
+.arrows path {
+    stroke: #757575;
+    fill: transparent;
+
+    stroke-width: 1px;
+
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+.arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s;
+}
+
+.arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s;
+}
+
+.arrows path.a3 {
+    animation-delay:0s;
+    -webkit-animation-delay:0s;
+}
+
+@keyframes arrow {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
 
 .dud {
     // Color of the changing word

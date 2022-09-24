@@ -3,6 +3,7 @@ import Background from '../../components/Backgound/Background';
 import './Home.scss'
 import Title from '../../components/Title/Title';
 import Intro from '../../components/Intro/Intro';
+import Projects from '../../components/Projects/Projects';
 import createScrollSnap from '../../utils/scroller';
 
 export default function Home() {
@@ -33,7 +34,11 @@ export default function Home() {
       </div>
 
       <div className="Item">
-        <Intro />
+        < Intro />
+      </div>
+
+      <div className="Item">
+        < Projects />
       </div>
     </div>
   )

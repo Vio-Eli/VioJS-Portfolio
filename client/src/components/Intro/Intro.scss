@@ -4,110 +4,107 @@
     --size: 300px;
 }
 
-.icon {
-    width: 180px;
-    height: 180px;
-    position: absolute;
-    z-index: 1;
-
-    align-items: center;
-    //margin-top: -200px;
+.eli {
 }
 
 .introWrapper {
 
     // Display
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    //text-align: center;
+    // display: flex;
 
     z-index: 4;
 
-    //background: colors.$plump-purple;
     background-image: linear-gradient(to bottom, #751191, rgb(0, 0, 0));
     height: 100vh;
     width: 100vw;
 
-    >.left {
-        // Display
-        justify-content: center;
-        align-items: center;
+    >.introHeader {
+
+        // Font 
+        font-weight: 100;
+        font-size: 50px;
+
+        margin-top: 2%;
+        margin-left: 2%;
+
+        // Colors
+        color: colors.$white;
+
+        >.introSubHeader {
+
+            // Font 
+            font-size: 40px;
+    
+            // // Colors
+            // color: colors.$white;
+
+        }
+    }
+
+    >.intros {
         display: flex;
-        flex: .5;
         flex-direction: column;
-        margin: auto;
 
-        $hexDist: 5px;
-        $hexSize: 250px;
+        >.intro {
+            // margin-top: 2%;
+            // margin-left: 6%;
+            padding-top: 2%;
+            padding-left: 6%;
+            display: flex;
+            // width: 100%;
 
-        >.top-left {
-            margin-right: 0.866*($hexSize + $hexDist / 2);//150px;
-            margin-bottom: ($hexSize + $hexDist / 2);
-            position: absolute;
+            // >.pfp {
+            //     max-width: 25%;
+            //     height: auto;
+            //     width: auto\9;
+            // }
+
+            // >.pfp2 {
+            //     width: 100%;
+            //     background-image: url('introimgs/viopfphex3.png');
+            //     background-repeat: no-repeat;
+            //     background-size: contain;
+            // }
+
+            // >.pfp3::before {
+            //     content: url('./introimgs/viopfphex3.png');
+            // }
+            
+            >.pfpBox {
+                max-width: 300px;
+                >.pfp {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+    
+            >.introBody {
+                // margin-top: 2%;
+                // margin-left: 4%;
+                // margin-right: 4%;
+                padding-top: 2%;
+                padding-left: 4%;
+                padding-right: 4%;
+    
+                flex-direction: column;
+    
+                >.name {
+                    font-size: 40px;
+    
+                    >.motto {
+                        font-size: 25px;
+                        font-style: italic;
+    
+                        flex-direction: row;
+                    }
+                }
+        
+                >.bio {
+                    // margin-top: 2%;
+                    padding-top: 2%;
+                    font-size: 20px;
+                }
+            }
         }
-
-        >.middle-right {
-            margin-left: 0.866*($hexSize + $hexDist / 2);
-            position: absolute;
-        }
-
-        >.bottom-left {
-            margin-top: ($hexSize + $hexDist / 2);
-            margin-right: 0.866*($hexSize + $hexDist / 2);
-            position: absolute;
-        }
     }
-
-    >.right {
-        display: flex;
-        flex: .5;
-    }
-
-
-}
-
-@mixin hexagonMaker($hexagon-size: 200px) {
-    $hexagon-color-1: #00ffb8;
-    $hexagon-color-2: #13ce9a;
-
-    width: 0.5 * $hexagon-size;
-    height: 0.866 * $hexagon-size;
-    background: $hexagon-color-1;
-    //border-radius: ($hexagon-size / 10);
-    //transition: transform 400ms ease;
-
-    &:before,
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: inherit;
-        height: inherit;
-        background: inherit;
-        //border-radius: inherit;
-    }
-
-    &:before {
-        transform: rotate(60deg);
-    }
-
-    &:after {
-        transform: rotate(-60deg);
-    }
-}
-
-.hexagon {
-    @include hexagonMaker(250px); // 225px
-    transform: translate(0%, 0%);
-}
-
-.hexaRot {
-    @include hexagonMaker();
-    transform: translate(0%, 0%);
-    transform: rotate(30deg);
 }

@@ -1,0 +1,42 @@
+.projectsWrapper {
+    z-index: 4;
+
+    background-image: linear-gradient(to bottom, #751191, rgb(0, 0, 0));
+    height: 100vh;
+    width: 100vw;
+}
+
+.projectsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    >.project {
+        width: 30%;
+        margin-bottom: 20px;
+    
+        >.projectTitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        >.projectDescription {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    
+        >.projectLink {
+            font-size: 14px;
+            color: blue;
+            text-decoration: none;
+        }
+    }
+}
